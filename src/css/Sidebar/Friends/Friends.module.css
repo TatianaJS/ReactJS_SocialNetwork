@@ -1,0 +1,17 @@
+.friends {
+    color: #fff;
+    margin: 0 0 0 30px;
+}
+
+.friends h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.list {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}

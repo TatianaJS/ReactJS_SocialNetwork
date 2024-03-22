@@ -1,0 +1,73 @@
+.header {
+  align-items: center;
+  background-color:#010123;
+  box-sizing: border-box;
+  display: flex;
+  grid-area: h;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.header img {
+  height: auto;
+  width: 60px;
+}
+
+.auth_block {
+  color: #fff;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.auth_block > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+  max-width: 300px;
+}
+
+.auth_block a {
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+.auth_block a:after {
+  background: transparent;
+  bottom: -4px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: all .2s ease-in-out;
+  width: 0;
+}
+
+.auth_block a:hover:after,
+.auth_block a.active:after {
+  background: #fff;
+  width: 100%;
+}
+
+.auth_block a.active {
+  font-weight: 750;
+}
+
+.signout_btn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  padding: 7px 15px;
+  scale: 1;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+}
+
+.signout_btn:hover {
+  scale: .95;
+}

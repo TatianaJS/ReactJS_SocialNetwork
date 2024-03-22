@@ -1,0 +1,15 @@
+.item {
+    border: 1px solid rgb(1, 1, 35);
+    border-radius: 15px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    width: 60%;
+}
+
+.item[class*='msg_friend'] {
+    align-self: flex-start;
+}
+
+.item[class*='msg_im'] {
+    align-self: flex-end;
+}

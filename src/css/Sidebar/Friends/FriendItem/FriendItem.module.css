@@ -1,0 +1,33 @@
+.friend {
+    flex-basis: 30%;
+    flex-shrink: 1;
+    margin: 5px 5px 5px 0;
+    max-width: 125px;
+    min-width: 110px;
+}
+
+.friend img {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    height: 50px;
+    object-fit: cover;
+    object-position: top;
+    margin: 0 0 10px;
+    width: 50px;
+}
+
+.friend a {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    transition: all ease-in-out .15s;
+}
+
+.friend a:hover {
+    font-weight: 500;
+}

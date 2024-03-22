@@ -1,0 +1,17 @@
+.nav_pages {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.nav_pages span {
+    cursor: pointer;
+    line-height: 1;
+}
+
+.selected_page {
+    font-size: 24px;
+    font-weight: 600;
+}

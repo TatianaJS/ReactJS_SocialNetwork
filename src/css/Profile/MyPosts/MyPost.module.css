@@ -1,0 +1,24 @@
+.entries {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.entries p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.entries form {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 0 30px;
+    width: 50%;
+}
+
+.entries a {
+    color: #265b38;
+    font-weight: 500;
+}

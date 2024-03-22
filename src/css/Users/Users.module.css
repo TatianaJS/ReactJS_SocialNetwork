@@ -1,0 +1,54 @@
+.users_list > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+.info {
+    align-items: center;
+    display: flex;
+    gap: 25px;
+}
+
+.user_photo {
+    height: 100px;
+    object-fit: contain;
+    object-position: top;
+    width: 100px;
+}
+
+.follow_buttons button {
+    border: 2px solid rgb(1, 1, 35);
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 550;
+    line-height: 1;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.follow_buttons button:disabled,
+.follow_buttons button[disabled] {
+    background: #fff;
+    border: 1px solid #999;
+    color: #999;
+    cursor: default;
+}
+
+.unfollow_btn {
+    background-color: #fff;
+    color: rgb(1, 1, 35);
+}
+
+.follow_btn {
+    background-color: rgb(1, 1, 35);
+    color: #fff;
+}
+
+.u_name {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}

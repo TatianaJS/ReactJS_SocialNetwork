@@ -1,0 +1,15 @@
+.profile_status,
+.profile_status__input {
+    margin: 25px 0;
+}
+
+.profile_status {
+    font-size: 24px;
+    font-style: italic;
+}
+
+.profile_status__input input {
+    border: 1px solid rgb(1, 1, 35);
+    padding: 15px;
+    font-size: 22px;
+}

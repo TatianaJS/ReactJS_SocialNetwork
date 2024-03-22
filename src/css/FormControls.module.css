@@ -1,0 +1,16 @@
+input.error ~ span,
+textarea.error ~ span {
+    color: #ff0000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+input.error,
+textarea.error {
+    border: 1px solid #ff0000;
+}
+
+.form_error {
+    color: #ff0000;
+}

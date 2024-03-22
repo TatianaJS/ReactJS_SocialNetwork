@@ -1,0 +1,19 @@
+.dialogues {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 2fr 10fr;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 0 30px;
+    width: 45%;
+}
