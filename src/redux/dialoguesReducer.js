@@ -1,3 +1,9 @@
+import avImgOne from '../assets/img/avatar_1.png';
+import avImgTwo from '../assets/img/avatar_2.jpg';
+import avImgThree from '../assets/img/avatar_3.jpg';
+import avImgFour from '../assets/img/avatar_4.jpg';
+import avImgFive from '../assets/img/avatar_5.jpg';
+
 const ADD_MSG = 'ADD-MSG';
 
 let initialState = {
@@ -5,27 +11,27 @@ let initialState = {
         {
             id: 1,
             name: 'Мария',
-            image: 'avatar_1.png'
+            image: avImgOne
         },
         {
             id: 2,
             name: 'Антон',
-            image: 'avatar_2.jpg'
+            image: avImgTwo
         },
         {
             id: 3,
             name: 'Мартин',
-            image: 'avatar_5.jpg'
+            image: avImgThree
         },
         {
             id: 4,
             name: 'Алексей',
-            image: 'avatar_4.jpg'
+            image: avImgFour
         },
         {
             id: 5,
             name: 'Евгения',
-            image: 'avatar_3.jpg'
+            image: avImgFive
         }
     ],
     messagesDt: [

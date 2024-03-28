@@ -1,44 +1,45 @@
-.top_img {
-  height: 300px;
-  overflow: hidden;
-  margin: 0 auto 50px;
-  width: 100%;
-}
-  
-.top_img img {
-  height: auto;
-  width: 100%;
-}
-  
 .avatar {
-  margin: 0 30px 0 0;
+  border: 1px solid #010123;
+  margin: 0 1.66em 0 0;
+  height: 16.66em;
+  max-width: 16.66em;
+  width: 25%;
 }
   
 .avatar img {
   height: auto;
-  max-height: 300px;
-  max-width: 300px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
   width: 100%;
 }
   
-.info {
+.info_page {
   display: flex;
   justify-content: flex-start;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.66em 0;
+}
+
+.line_one {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2.5em;
+}
+
+.line_one button {
+  margin: 0;
 }
 
 .fio {
-  font-size: 30px;
+  font-size: 1.66em;
   font-weight: 900;
 }
 
 .data {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+  width: 75%;
 }
   
-.data div:not(.profile__fio) {
+.data .info {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -49,7 +50,7 @@
 }
 
 .data a {
-  color: rgb(1, 1, 35);
+  color: #010123;
   display: inline;
   font-weight: 500;
   position: relative;
@@ -57,13 +58,13 @@
 }
 
 .data a:after {
-  background-color: rgb(1, 1, 35);
-  bottom: -2px;
+  background-color: #010123;
+  bottom: -.11em;
   content: '';
-  height: 1px;
+  height: .05em;
   left: 0;
   position: absolute;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out .17s;
   width: 100%;
 }
 
@@ -71,4 +72,52 @@
 .data a:active:after {
   background-color: transparent;
   width: 0;
+}
+
+.contacts_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.separate {
+  display: block;
+  font-size: 1.11em;
+  font-style: italic;
+  margin: .83em 0 0;
+}
+
+.info_page form {
+  width: 70%;
+}
+
+.info_page form div {
+  margin: 0 0 1.11em;
+}
+
+.info_page form label div {
+  margin: 0;
+}
+
+form .contact div {
+  margin-top: .27px;
+}
+
+@media (max-width: 1180px) {
+  .avatar {
+    max-width: none;
+    width: 30%;
+  }
+  .data {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .line_one {
+    flex-direction: column;
+  }
+
+  .fio ~ div {
+    margin-top: 15px;
+  }
 }

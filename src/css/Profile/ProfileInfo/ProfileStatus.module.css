@@ -1,15 +1,26 @@
 .profile_status,
 .profile_status__input {
-    margin: 25px 0;
+    margin: 1.11em 0 0;
 }
 
 .profile_status {
-    font-size: 24px;
+    font-size: .73em;
     font-style: italic;
+    font-weight: 600;
 }
 
 .profile_status__input input {
-    border: 1px solid rgb(1, 1, 35);
-    padding: 15px;
-    font-size: 22px;
+    font-size: .73em;
+}
+
+.profile_status b {
+    font-style: normal;
+    font-weight: 400;
+}
+
+@media (max-width: 1180px) {
+    .profile_status,
+    .profile_status__input input {
+        font-size: .66em;
+    }
 }

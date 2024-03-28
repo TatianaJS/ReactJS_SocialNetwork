@@ -23,7 +23,7 @@ const Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, secti
                         К началу
                     </button>
                     <button onClick={() => {setSectionNumber(sectionAmount - 1)}}>
-                        Предыдущая
+                        Пред.
                     </button>
                 </div>
             }
@@ -33,7 +33,7 @@ const Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, secti
                     return (
                         <span 
                             key={index}
-                            className={currentPage === page && classes.selected_page || classes.page}
+                            className={currentPage === page ? classes.selected_page : classes.pg}
                             onClick={(e) => {onPageChanged(page)}}>
                             {page}
                         </span>
@@ -42,12 +42,12 @@ const Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, secti
             {sectionsAmount > sectionNumber &&
                 <div>
                     <button onClick={() => {setSectionNumber(sectionNumber + 1)}}>
-                    Следующая
+                    След.
                     </button>
                     <button onClick={() => {
                         onPageChanged(pages[pages.length - 1])
                         setSectionNumber(sectionsAmount)}}>
-                            Последняя
+                            На последнюю
                         </button>
             </div>
             }

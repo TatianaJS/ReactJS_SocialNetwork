@@ -6,7 +6,7 @@ const FriendItem = (props) => {
     return (
         <div className={classes.friend}>
             <NavLink to={'/friends/' + props.id}>
-                <img src={'/img/' + props.image} alt='' />
+                <img src={props.image} alt='' />
                 {props.name}
             </NavLink>
         </div>

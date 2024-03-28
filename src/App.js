@@ -1,5 +1,5 @@
-import React, { Component, Suspense, lazy } from 'react';
-import {BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
+import React, { Component, lazy } from 'react';
+import { HashRouter, Routes, Route, useParams, BrowserRouter, Navigate } from 'react-router-dom';
 import { connect, Provider } from 'react-redux';
 import './css/App.css';
 import HeaderContainer from './components/Header/HeaderContainer';
@@ -31,9 +31,20 @@ export function withRouter(Children) {
 }
 
 class App extends Component {
+  /*catchAllUnhandledErrors = (promiseRejectionEvent) => {
+    alert('Error occured');
+    console.error(promiseRejectionEvent);
+  }*/
+
   componentDidMount() {
     this.props.initializeApp();
+    window.addEventListener('unhandlerejection', this.catchAllUnhandledErrors);
   }
+
+  /*componentWillUnmount() {
+    window.removeEventListener('unhandlerejection', this.catchAllUnhandledErrors);
+  }*/
+
   render() {
     if (!this.props.initialized) {
       return <Preloader />
@@ -46,11 +57,15 @@ class App extends Component {
         <div className='content'>
           <Routes>
             <Route 
+              exact 
+              path='/' 
+              element={<Navigate to={'/profile'} /> } />
+            <Route 
               path='/messages' 
-              element={<DialogContainerWithSuspense/>} />
+              element={<DialogContainerWithSuspense />} />
             <Route 
               path='/profile/:userId?' 
-              element={<ProfileContainerWithSuspense/>} />
+              element={<ProfileContainerWithSuspense />} />
             <Route 
               path='/users' 
               element={<UsersContainer />} />
@@ -66,6 +81,9 @@ class App extends Component {
             <Route 
               path='/auth' 
               element={<Auth />} />
+            <Route 
+              path='*' 
+              element={() => <div>404 NOT FOUND</div>} />
           </Routes>
         </div>
         <Footer />
@@ -86,14 +104,22 @@ const AppContainer = compose(
   withRouter,
   connect(mapStateToProps, {initializeApp}))(App);
 
+//v.1
+{/*<React.StrictMode></React.StrictMode>*/}
 const SocialNetworkApp = (props) => {
   return <BrowserRouter>
-    <React.StrictMode>
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </React.StrictMode>
   </BrowserRouter>
 };
+//v.2 for GitHub pages
+/*const SocialNetworkApp = (props) => {
+  return <HashRouter basename='/'>
+    <Provider store={store}>
+      <AppContainer />
+    </Provider>
+  </HashRouter>
+};*/
 
 export default SocialNetworkApp;

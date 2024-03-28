@@ -5,17 +5,17 @@
   display: flex;
   grid-area: h;
   justify-content: space-between;
-  padding: 30px;
+  padding: 1.66em;
 }
 
 .header img {
   height: auto;
-  width: 60px;
+  width: 3.33em;
 }
 
 .auth_block {
   color: #fff;
-  font-size: 20px;
+  font-size: 1.11em;
   font-style: italic;
 }
 
@@ -24,13 +24,13 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 15px;
-  max-width: 300px;
+  max-width: 16.66em;
 }
 
 .auth_block a {
   color: #fff;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.11em;
   font-weight: 500;
   position: relative;
   text-decoration: none;
@@ -40,10 +40,10 @@
   background: transparent;
   bottom: -4px;
   content: '';
-  height: 2px;
+  height: .11em;
   left: 0;
   position: absolute;
-  transition: all .2s ease-in-out;
+  transition: all .17s ease-in-out;
   width: 0;
 }
 
@@ -62,10 +62,10 @@
   border: 1px solid #fff;
   color: #fff;
   cursor: pointer;
-  padding: 7px 15px;
+  padding: .38em .83em;
   scale: 1;
   text-transform: uppercase;
-  transition: all .2s ease-in-out;
+  transition: all .17s ease-in-out;
 }
 
 .signout_btn:hover {

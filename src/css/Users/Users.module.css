@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 25px 0;
+    margin: 1.38em 0;
 }
 
 .info {
@@ -12,43 +12,38 @@
 }
 
 .user_photo {
-    height: 100px;
+    height: 5.55em;
     object-fit: contain;
     object-position: top;
-    width: 100px;
+    transition: all ease-in-out .17s;
+    width: 5.55em;
 }
 
-.follow_buttons button {
-    border: 2px solid rgb(1, 1, 35);
-    box-sizing: border-box;
-    cursor: pointer;
-    font-weight: 550;
-    line-height: 1;
-    padding: 10px 15px;
-    text-transform: uppercase;
-}
-
-.follow_buttons button:disabled,
-.follow_buttons button[disabled] {
-    background: #fff;
-    border: 1px solid #999;
-    color: #999;
-    cursor: default;
+.user_photo:active,
+.user_photo:hover {
+    opacity: .45;
+    scale: .95;
 }
 
 .unfollow_btn {
     background-color: #fff;
-    color: rgb(1, 1, 35);
+    color: #010123;
 }
 
 .follow_btn {
-    background-color: rgb(1, 1, 35);
+    background-color: #010123;
     color: #fff;
 }
 
 .u_name {
     display: block;
-    font-size: 22px;
+    font-size: 1.22em;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: .27em;
+}
+
+.u_status {
+    font-size: .88em;
+    font-style: italic;
+    font-weight: 300;
 }

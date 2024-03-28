@@ -3,7 +3,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import Profile from './Profile';
-import { getUserProfile, getUserStatus, updateUserStatus } from '../../redux/profileReducer';
+import { getUserProfile, getUserStatus, updateUserStatus, savePhoto, saveProfile } from '../../redux/profileReducer';
 
 export function withRouter(Children) {
     return(props) => {
@@ -13,7 +13,7 @@ export function withRouter(Children) {
 }
 
 class ProfileContainer extends React.Component {
-    componentDidMount() {
+    reloadProfile() {
         let userId = this.props.match.params.userId;
         if (!userId) {
             userId = this.props.authorizedUserId;
@@ -23,14 +23,27 @@ class ProfileContainer extends React.Component {
         this.props.getUserStatus(userId);
     }
 
+    componentDidMount() {
+        this.reloadProfile();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.match.params.userId !== prevProps.match.params.userId) {
+            this.reloadProfile();
+        }
+    }
+
     render() {
         return (
             <div>
                 <Profile 
                     { ...this.props } 
-                    userProfile={ this.props.userProfile } 
-                    status={ this.props.status} 
-                    updateStatus={ this.props.updateUserStatus } />
+                    isOwner={!this.props.match.params.userId}
+                    userProfile={this.props.userProfile} 
+                    status={this.props.status} 
+                    updateStatus={this.props.updateUserStatus}
+                    savePhoto={this.props.savePhoto}
+                    saveProfile={this.props.saveProfile} />
             </div>
         );
     }
@@ -46,6 +59,6 @@ let mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, { getUserProfile, getUserStatus, updateUserStatus }),
+    connect(mapStateToProps, { getUserProfile, getUserStatus, updateUserStatus, savePhoto, saveProfile }),
     withRouter
 )(ProfileContainer);

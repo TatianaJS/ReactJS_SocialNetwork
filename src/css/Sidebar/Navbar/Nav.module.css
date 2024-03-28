@@ -1,14 +1,14 @@
 .nav {
-  margin: 0 0 60px 0;
+  margin: 0 0 3.33em 0;
 }
   
 .item {
-  margin: 30px 0 0 30px;
+  margin: 1.66em 0 0 1.66em;
 }
 
 .item a {
   color: #fff;
-  font-size: 22px;
+  font-size: 1.11em;
   font-weight: 600;
   position: relative;
   text-decoration: none;
@@ -18,10 +18,10 @@
   background: transparent;
   bottom: -4px;
   content: '';
-  height: 2px;
+  height: .11em;
   left: 0;
   position: absolute;
-  transition: all .2s ease-in-out;
+  transition: all .17s ease-in-out;
   width: 0;
 }
 

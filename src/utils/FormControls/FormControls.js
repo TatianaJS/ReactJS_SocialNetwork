@@ -6,8 +6,8 @@ const FormControl = ({meta, input, element, ...props}) => {
     const hasError = meta.touched && meta.error;
     return (
         <>
-            { React.createElement(element, {...input, ...props, className: hasError && classes.error}, null) }
-            { hasError && <span>{meta.error}</span>}
+            {React.createElement(element, {...input, ...props, className: hasError ? classes.error : null}, null)}
+            {hasError && <span>{meta.error}</span>}
         </>
     )
 }

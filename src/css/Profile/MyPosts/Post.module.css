@@ -1,30 +1,41 @@
 .posts {
-    margin: 0 0 30px;
+    margin: 0 0 1.66em;
 }
 
 .item {
     align-items: center;
-    border-bottom: 1px solid rgb(1, 1, 35);
+    border-bottom: 1px solid #010123;
     display: flex;
     justify-content: flex-start;
-    margin: 0 0 15px;
-    padding: 0 0 15px;
+    margin: 0 0 .83em;
+    padding: 0 0 .83em;
     position: relative;
 }
 
 .item img {
-    border: 1px solid rgb(1, 1, 35);
+    border: 1px solid #010123;
     border-radius: 50%;
-    height: 80px;
-    margin: 0 30px 0 0;
+    height: 4.44em;
+    margin: 0 1.66em 0 0;
     object-fit: cover;
     object-position: top;
-    width: 80px;
+    width: 4.44em;
 }
 
 .like {
-    bottom: 0;
-    font-size: 14px;
+    bottom: .35em;
+    display: flex;
+    font-size: .77em;
+    gap: 7px;
+    justify-content: flex-end;
     position: absolute;
-    right: 0;
+    right: .35em;
+}
+
+.like img {
+    border: 0;
+    border-radius: 0;
+    height: 1rem;
+    margin: 0;
+    width: auto;
 }

@@ -15,12 +15,12 @@ const User = ({user, followingInProgress, follow, unfollow}) => {
                 </NavLink>
                 <div className={classes.user_info}>
                     <div>
-                        <span className={classes.u_name}>{user.name}</span>
-                        <span>{user.status}</span>
-                    </div>
-                    <div>
-                        <span>{'user.location.city'}</span>
-                        <span>{'user.location.country'}</span>
+                        <span className={classes.u_name}>
+                            {user.name}
+                        </span>
+                        <span className={classes.u_status}>
+                            {user.status}
+                        </span>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 .page_title {
     color: #000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 1.66em;
 }
 
 .signin_form {
@@ -9,5 +9,5 @@
 }
 
 .signin_form > div {
-    margin: 0 0 20px;
+    margin: 0 0 1.11em;
 }

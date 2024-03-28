@@ -9,9 +9,19 @@
 .nav_pages span {
     cursor: pointer;
     line-height: 1;
+    transition: all ease-in-out .17s;
+}
+
+.nav_pages span:active,
+.nav_pages span:hover {
+    font-weight: 550;
 }
 
 .selected_page {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 1.22em;
+    font-weight: 650;
+}
+
+.nav_pages button ~ button {
+    margin: 0 0 0 10px;
 }

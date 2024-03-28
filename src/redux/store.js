@@ -1,6 +1,11 @@
 import dialoguesReducer from "./dialoguesReducer";
 import profileReducer from "./profileReducer";
 import sidebarReducer from "./sidebarReducer";
+import avImgOne from '../assets/img/avatar_1.png';
+import avImgTwo from '../assets/img/avatar_2.jpg';
+import avImgThree from '../assets/img/avatar_3.jpg';
+import avImgFour from '../assets/img/avatar_4.jpg';
+import avImgFive from '../assets/img/avatar_5.jpg';
 
 let store = {
     //свойства
@@ -9,16 +14,19 @@ let store = {
             postsDt: [
                 {
                     id: 1,
+                    image: avImgOne,
                     message: 'Hi, how are u?',
                     likes: 12
                 },
                 {
                     id: 2,
+                    image: avImgTwo,
                     message: 'Hi, everybody!',
                     likes: 36
                 },
                 {
                     id: 3,
+                    image: avImgThree,
                     message: 'OK. And u?',
                     likes: 26
                 }
@@ -30,27 +38,27 @@ let store = {
                 {
                     id: 1,
                     name: 'Мария',
-                    image: 'avatar_1.png'
+                    image: avImgOne
                 },
                 {
                     id: 2,
                     name: 'Антон',
-                    image: 'avatar_2.jpg'
+                    image: avImgTwo
                 },
                 {
                     id: 3,
                     name: 'Мартин',
-                    image: 'avatar_5.jpg'
+                    image: avImgThree
                 },
                 {
                     id: 4,
                     name: 'Алексей',
-                    image: 'avatar_4.jpg'
+                    image: avImgFour
                 },
                 {
                     id: 5,
                     name: 'Евгения',
-                    image: 'avatar_3.jpg'
+                    image: avImgFive
                 }
             ],
             messagesDt: [
@@ -82,7 +90,7 @@ let store = {
                 {
                     id: 1,
                     name: 'Мария Кононова',
-                    image: 'avatar_1.png' 
+                    image: 'https://disk.yandex.ru/i/zd_9XB61xtnjOQ' 
                 },
                 {
                     id: 2,

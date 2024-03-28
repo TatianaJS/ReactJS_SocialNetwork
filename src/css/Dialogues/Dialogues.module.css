@@ -14,6 +14,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 0 0 30px;
+    margin: 0 0 1.66em;
     width: 45%;
 }

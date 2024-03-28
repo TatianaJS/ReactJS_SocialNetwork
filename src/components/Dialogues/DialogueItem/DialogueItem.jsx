@@ -6,7 +6,7 @@ const DialogueItem = (props) => {
     return (
         <div className={classes.dialogue}>
             <NavLink to={'/messages/' + props.id}>
-                <img src={'/img/' + props.image} alt='' />
+                <img src={props.image} alt='' />
                 {props.name}
             </NavLink>
         </div>

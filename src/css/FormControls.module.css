@@ -2,7 +2,7 @@ input.error ~ span,
 textarea.error ~ span {
     color: #ff0000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: .77em;
     font-weight: 550;
 }
 

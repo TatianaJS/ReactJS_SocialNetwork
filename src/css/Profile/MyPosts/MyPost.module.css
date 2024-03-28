@@ -5,7 +5,7 @@
 }
 
 .entries p {
-    font-size: 24px;
+    font-size: 1.33em;
     font-weight: 600;
 }
 
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 0 0 30px;
+    margin: 0 0 1.66em;
     width: 50%;
 }
 
