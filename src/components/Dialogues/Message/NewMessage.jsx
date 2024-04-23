@@ -1,15 +1,15 @@
-import React from 'react';
-import classes from '../../../css/Dialogues/Message/NewMessage.module.css';
+import React from 'react'
+import classes from '../../../css/Dialogues/Message/NewMessage.module.css'
 
 const NewMessage = (props) => {
     let addMsg = () => {
-        props.addMsg();
-    };
+        props.addMsg()
+    }
 
     let onMsgChange = (e) => {
-        let msgText = e.target.value;
-        props.newMsgPost(msgText);
-    };
+        let msgText = e.target.value
+        props.newMsgPost(msgText)
+    }
 
     return (
         <div>
@@ -20,7 +20,7 @@ const NewMessage = (props) => {
                 </button>
             </form>
         </div>
-    );
+    )
 }
 
-export default NewMessage;
+export default NewMessage
