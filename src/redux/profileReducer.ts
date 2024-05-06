@@ -35,7 +35,7 @@ let initialState = {
     ] as Array<PostType>,
     userProfile: null as UserProfileType | null,
     status: '',
-    newPostText: ''
+    //newPostText: ''
 }
 
 const profileReducer = (state = initialState, action: ActionsType): InitialStateType => {
@@ -48,8 +48,7 @@ const profileReducer = (state = initialState, action: ActionsType): InitialState
             }
             return {
                 ...state,
-                postsDt: [...state.postsDt, newPost],
-                newPostText: ''
+                postsDt: [...state.postsDt, newPost]
             }
         case SET_USER_PROFILE:
             return {
@@ -69,24 +68,24 @@ const profileReducer = (state = initialState, action: ActionsType): InitialState
         case SAVE_PHOTO_SUCCESS:
             return {
                 ...state,
-                profile: {
-                    ...state.profile, 
+                userProfile: {
+                    ...state.userProfile, 
                     photos: action.photos
                 } as UserProfileType
             }
         default:
             return state
-    };
+    }
 }
 
 //dispatch
 //export const addPostActionCreator = (newPost) => ({type: ADD_POST, newPost});
 export const actions = {
-    addPostActionCreator: (text: string) => ({type: ADD_POST, newPostText: text} as const),
+    addPostActionCreator: (newPostText: string) => ({type: ADD_POST, newPostText} as const),
     setUserProfile: (userProfile: UserProfileType) => ({type: SET_USER_PROFILE, userProfile} as const),
     setStatus: (status: string) => ({type: SET_STATUS, status} as const),
     deletePost: (postId: number) => ({type: DELETE_POST, postId} as const),
-    savePhotoSuccess: (photos: PhotosType) => ({type: SAVE_PHOTO_SUCCESS, photos})
+    savePhotoSuccess: (photos: PhotosType) => ({type: SAVE_PHOTO_SUCCESS, photos} as const)
 }
 
 //thunk

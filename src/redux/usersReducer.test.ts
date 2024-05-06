@@ -50,7 +50,8 @@ beforeEach(() => {
         totalItemsCount: 0,
         currentPage: 1,
         isFetching: false,
-        followingInProgress: []
+        followingInProgress: [],
+        filter: {term: '', friend: null as null | boolean}
     }
 })
 

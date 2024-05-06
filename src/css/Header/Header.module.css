@@ -71,3 +71,10 @@
 .signout_btn:hover {
   scale: .95;
 }
+
+.authInfo {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}

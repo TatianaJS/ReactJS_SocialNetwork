@@ -14,6 +14,7 @@
     "@types/react-dom": "^18.2.24",
     "@types/react-redux": "^7.1.33",
     "@types/redux-form": "^8.3.10",
+    "antd": "^5.16.4",
     "axios": "^1.6.7",
     "formik": "^2.4.5",
     "react": "^18.2.0",
@@ -26,6 +27,7 @@
     "redux-thunk": "^3.1.0",
     "reselect": "^5.1.0",
     "typescript": "^5.4.4",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -62,7 +64,12 @@
   "devDependencies": {
     "@types/css-modules": "^1.0.5",
     "@types/react-test-renderer": "^18.0.7",
+    "@types/uuid": "^9.0.8",
     "gh-pages": "^6.1.1",
     "react-test-renderer": "^18.2.0"
-  }
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

@@ -1,7 +1,7 @@
-import React from 'react';
-import Nav from './Navbar/Nav';
-import FriendsContainer from './Friends/FriendsContainer';
-import classes from '../../css/Sidebar/Sidebar.module.css';
+import React from 'react'
+import Nav from './Navbar/Nav'
+import FriendsContainer from './Friends/FriendsContainer'
+import classes from '../../css/Sidebar/Sidebar.module.css'
 
 const Sidebar = (props) => {
     return (
@@ -9,7 +9,7 @@ const Sidebar = (props) => {
             <Nav />
             <FriendsContainer friends={props.friends} />
         </div>
-    );
+    )
 }
 
-export default Sidebar;
+export default Sidebar

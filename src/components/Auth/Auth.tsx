@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import { InjectedFormProps, reduxForm } from 'redux-form'
-import { connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Authorization } from '../../redux/authReducer'
 import { Navigate } from 'react-router-dom'
 import classes from '../../css/Auth/Auth.module.css'
 import { GetStringKeys, Input, createField } from '../../utils/FormControls/FormControls'
 import { requiredField } from '../../utils/Validators/Validators'
-import { AppStateType } from '../../redux/redux-store'
+import { AppDispatch, AppStateType } from '../../redux/redux-store'
 
 type AuthorizationFormOwnProps = {
     captchaUrl: string | null
@@ -38,15 +38,6 @@ const SignInReduxForm = reduxForm<AuthorizationFormValuesType, AuthorizationForm
     form: 'signIn'
 })(SignInForm)
 
-type MapStatePropsType = {
-    captchaUrl: string | null
-    isAuthorized: boolean
-}
-
-type MapDispatchPropsType = {
-    Authorization: (email: string, password: string, rememberMe: boolean, captcha: string) => void
-}
-
 export type AuthorizationFormValuesType = {
     email: string
     password: string
@@ -56,28 +47,25 @@ export type AuthorizationFormValuesType = {
 
 type AuthorizationFormValuesTypeKeys = GetStringKeys<AuthorizationFormValuesType>
 
-const Auth: FC<MapStatePropsType & MapDispatchPropsType> = (props) => {
+export const AuthPage: FC = () => {
+    const captchaUrl = useSelector((state: AppStateType) => state.auth.captchaUrl)
+    const isAuthorized = useSelector((state: AppStateType) => state.auth.isAuthorized)
+    const dispatch:AppDispatch = useDispatch()
+
     const onSubmit = (formData: AuthorizationFormValuesType) => {
-        props.Authorization(formData.email, formData.password, formData.rememberMe, formData.captcha)
+        dispatch(Authorization(formData.email, formData.password, formData.rememberMe, formData.captcha))
     }
 
-    if (props.isAuthorized) {
+    if (isAuthorized) {
         return <Navigate to={'/profile'} />
     }
 
     return <div>
-        <h1 className={ classes.page_title }>
+        <h1 className={classes.page_title}>
             Авторизация
         </h1>
         <SignInReduxForm 
             onSubmit={onSubmit} 
-            captchaUrl={props.captchaUrl} />
+            captchaUrl={captchaUrl} />
     </div>
 }
-
-const mapStateToProps = (state: AppStateType): MapStatePropsType => ({
-    isAuthorized: state.auth.isAuthorized,
-    captchaUrl: state.auth.captchaUrl
-})
-
-export default connect(mapStateToProps, {Authorization})(Auth)

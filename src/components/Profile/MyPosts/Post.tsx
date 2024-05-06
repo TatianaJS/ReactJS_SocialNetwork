@@ -4,7 +4,7 @@ import likeImg from '../../../assets/img/like__heart.png'
 
 type PostPropsType = {
     message: string
-    image: string
+    image: string | undefined
     likes: number
 }
 
