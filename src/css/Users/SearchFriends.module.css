@@ -1,0 +1,16 @@
+.search_friends form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: flex-start;
+    margin-bottom: 2em;
+}
+
+.search_friends form input {
+    width: 35%;
+}
+
+.search_friends form select {
+    width: 35%;
+}

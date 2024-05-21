@@ -120,8 +120,8 @@ export const follow = (userId: number): ThunkType => {
     }
 }
 
-export const unfollow = (userId: number): ThunkType =>{
-    return async (dispatch: any) => {
+export const unfollow = (userId: number): ThunkType => {
+    return async (dispatch) => {
         await _followUnfollowFlow(dispatch, userId, usersAPI.unfollowUser.bind(usersAPI), actions.affirmUnfollow)
     }
 }

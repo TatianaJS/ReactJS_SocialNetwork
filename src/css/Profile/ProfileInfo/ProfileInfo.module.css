@@ -13,6 +13,10 @@
   object-position: top;
   width: 100%;
 }
+
+.avatar input[type='file'] {
+    margin-top: 1em;
+}
   
 .info_page {
   display: flex;

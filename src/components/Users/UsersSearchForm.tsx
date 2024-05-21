@@ -3,6 +3,7 @@ import { Field, Form, Formik, FormikHelpers } from 'formik'
 import { FilterType } from '../../redux/usersReducer'
 import { useSelector } from 'react-redux'
 import { getUsersFilter } from '../../redux/usersSelectors'
+import classes from '../../css/Users/SearchFriends.module.css'
 
 const usersSearchFormValidate = (values: any) => {
     const errors = {}
@@ -32,7 +33,7 @@ export const UsersSearchForm: FC<UsersSearchPropsType> = React.memo((props) => {
         setSubmitting(false)
     }
 
-    return <div>
+    return <div className={classes.search_friends}>
         <Formik
             enableReinitialize
             initialValues={{term: filter.term, friend: String(filter.friend) as FriendFormType}}

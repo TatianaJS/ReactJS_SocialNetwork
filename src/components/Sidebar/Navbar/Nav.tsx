@@ -21,6 +21,13 @@ const Nav: FC = () => {
             </div>
             <div className={classes.item}>
                 <NavLink 
+                    to='/chat'
+                    className={navData => navData.isActive ? classes.active : ''}>
+                    Чат
+                </NavLink>
+            </div>
+            <div className={classes.item}>
+                <NavLink 
                     to='/messages'
                     className={navData => navData.isActive ? classes.active : ''}>
                     Сообщения
